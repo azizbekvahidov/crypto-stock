@@ -16,9 +16,7 @@ part 'api_repo.g.dart';
 
 // @RestApi(baseUrl: ApiConstants.baseUrl)
 abstract class RestClient {
-  factory RestClient(
-          Dio dio, String warehouseApi, String orderApi, String authApi) =
-      _RestClient;
+  factory RestClient(Dio dio) = _RestClient;
 
   @POST(ApiConstants.login)
   Future<ResponseData> signIn(@Body() Map<String, dynamic> body);

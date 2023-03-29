@@ -93,11 +93,11 @@ ThemeData basicTheme() {
   return base.copyWith(
     textTheme: _basicTextTheme(base.textTheme),
     //textTheme: Typography().white,
-    primaryColor: const Color(0xffffffff),
-    hintColor: const Color(0xffB2C0CD),
-    indicatorColor: const Color(0xFF212121),
-    scaffoldBackgroundColor: const Color(0xFFF2F4F7),
-    cardColor: Color(0xffEEF8FF),
+    primaryColor: const Color(0xff17181A),
+    hintColor: const Color(0xff878C90),
+    indicatorColor: const Color(0xFF0152FE),
+    scaffoldBackgroundColor: const Color(0xFFF5F5F5),
+    cardColor: Color(0xff3C3F42),
     iconTheme: const IconThemeData(
       color: Colors.white,
       size: 20.0,
@@ -108,12 +108,12 @@ ThemeData basicTheme() {
     primaryIconTheme: IconThemeData(
       color: Color(0xffffffff),
     ),
-    splashColor: const Color(0xFF212121),
+    splashColor: const Color(0xFF454545),
     backgroundColor: Colors.white,
     colorScheme: ColorScheme.fromSwatch().copyWith(
-      primaryContainer: Color(0xff4829b2),
-      secondaryContainer: Color(0xff00264D),
-      onBackground: Colors.black,
+      primaryContainer: Color(0xff23C562),
+      secondaryContainer: Color(0xff77D21C),
+      onBackground: Color(0xff17DCD0),
       //info
       surface: Color(0xff0B4789),
       //success
