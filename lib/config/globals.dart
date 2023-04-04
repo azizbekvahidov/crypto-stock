@@ -4,3 +4,4 @@ import '../repository/models/models.dart';
 
 String lang = "ru";
 String token = "";
+User? userData;

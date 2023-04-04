@@ -1,4 +1,7 @@
+import 'package:crypto_stock/utils/assets_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 class MainView extends StatefulWidget {
   String url;
@@ -15,7 +18,228 @@ class _MainViewState extends State<MainView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          "Лого",
+          style: Get.textTheme.headline1,
+        ),
+        elevation: 0,
+        backgroundColor: Get.theme.scaffoldBackgroundColor,
+        leading: Container(
+          padding: const EdgeInsets.only(left: 20),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: SvgPicture.asset(Assets.icon("profile"), height: 40),
+        ),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(children: [
+          Container(
+            width: Get.width,
+            height: 140,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(28),
+              gradient: const RadialGradient(
+                center: Alignment(-0.3, -5.5),
+                focal: Alignment(-0.3, -0.4),
+                radius: 3.4,
+                colors: [
+                  Color(0xff23C562),
+                  Color(0xff77D21C),
+                  Color(0xff17DCD0),
+                ],
+              ),
+            ),
+            child: Stack(
+              children: [
+                Positioned(
+                  top: -90,
+                  right: -60,
+                  child: Container(
+                    width: 206,
+                    height: 206,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          color: const Color.fromRGBO(255, 255, 255, 0.2)),
+                      borderRadius: BorderRadius.circular(200),
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromRGBO(255, 255, 255, 0.4),
+                          Color.fromRGBO(255, 255, 255, 0),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  bottom: -110,
+                  right: -30,
+                  child: Container(
+                    width: 206,
+                    height: 206,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          color: const Color.fromRGBO(255, 255, 255, 0.2)),
+                      borderRadius: BorderRadius.circular(200),
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromRGBO(255, 255, 255, 0.4),
+                          Color.fromRGBO(255, 255, 255, 0),
+                        ],
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 30),
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  GestureDetector(
+                    onTap: () {},
+                    child: Column(children: [
+                      SvgPicture.asset(
+                        Assets.icon("buy"),
+                        width: Get.width * 0.17,
+                      ),
+                      const Padding(padding: EdgeInsets.only(top: 8)),
+                      Text(
+                        "Купить",
+                        style: Get.textTheme.headline6,
+                      ),
+                    ]),
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Column(children: [
+                      SvgPicture.asset(
+                        Assets.icon("sell"),
+                        width: Get.width * 0.17,
+                      ),
+                      const Padding(padding: EdgeInsets.only(top: 8)),
+                      Text(
+                        "Продать",
+                        style: Get.textTheme.headline6,
+                      ),
+                    ]),
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Column(children: [
+                      SvgPicture.asset(
+                        Assets.icon("p2p"),
+                        width: Get.width * 0.17,
+                      ),
+                      const Padding(padding: EdgeInsets.only(top: 8)),
+                      Text(
+                        "P2P",
+                        style: Get.textTheme.headline6,
+                      ),
+                    ]),
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Column(children: [
+                      SvgPicture.asset(
+                        Assets.icon("add"),
+                        width: Get.width * 0.17,
+                      ),
+                      const Padding(padding: EdgeInsets.only(top: 8)),
+                      Text(
+                        "Добавить",
+                        style: Get.textTheme.headline6,
+                      ),
+                    ]),
+                  ),
+                ]),
+          ),
+          Wrap(
+            alignment: WrapAlignment.spaceBetween,
+            spacing: 4,
+            runSpacing: 13,
+            children: [
+              Container(
+                width: Get.width * 0.44,
+                padding: const EdgeInsets.all(7),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(48),
+                  color: Get.theme.colorScheme.primaryContainer,
+                ),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Image.asset(Assets.icon("gold_coin", format: ".png")),
+                      Text(
+                        "RUB - AED",
+                        style: Get.textTheme.headline6,
+                      ),
+                      SvgPicture.asset(Assets.icon("down")),
+                    ]),
+              ),
+              Container(
+                width: Get.width * 0.44,
+                padding: const EdgeInsets.all(7),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(48),
+                  color: Get.theme.colorScheme.primaryContainer,
+                ),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Image.asset(Assets.icon("gold_coin", format: ".png")),
+                      Text(
+                        "AED - RUB",
+                        style: Get.textTheme.headline6,
+                      ),
+                      SvgPicture.asset(Assets.icon("down")),
+                    ]),
+              ),
+              Container(
+                width: Get.width * 0.44,
+                padding: const EdgeInsets.all(7),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(48),
+                  color: Get.theme.colorScheme.primaryContainer,
+                ),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Image.asset(Assets.icon("coin", format: ".png")),
+                      Text(
+                        "RUB - USDT",
+                        style: Get.textTheme.headline6,
+                      ),
+                      SvgPicture.asset(Assets.icon("down")),
+                    ]),
+              ),
+              Container(
+                width: Get.width * 0.44,
+                padding: const EdgeInsets.all(7),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(48),
+                  color: Get.theme.colorScheme.primaryContainer,
+                ),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Image.asset(Assets.icon("coin", format: ".png")),
+                      Text(
+                        "RUB - USDT",
+                        style: Get.textTheme.headline6,
+                      ),
+                      SvgPicture.asset(Assets.icon("down")),
+                    ]),
+              ),
+            ],
+          )
+        ]),
+      ),
     );
   }
 }
