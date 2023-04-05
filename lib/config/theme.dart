@@ -32,7 +32,7 @@ ThemeData basicTheme() {
         fontFamily: GoogleFonts.getFont("Poppins").fontFamily,
         fontSize: 16.0,
         fontWeight: FontWeight.w400,
-        color: const Color(0xffB2C0CD),
+        color: const Color(0xffffffff),
         fontFeatures: [
           const FontFeature.enable("pnum"),
           const FontFeature.enable("lnum")
@@ -51,7 +51,7 @@ ThemeData basicTheme() {
       headline2: base.headline2!.copyWith(
         fontFamily: GoogleFonts.getFont("Poppins").fontFamily,
         fontSize: 18.0,
-        color: const Color(0xff212121),
+        color: const Color(0xff121212),
         fontWeight: FontWeight.w600,
         fontFeatures: [
           const FontFeature.enable("pnum"),
@@ -68,7 +68,7 @@ ThemeData basicTheme() {
         ],
       ),
       bodyText1: base.bodyText2!.copyWith(
-        fontFamily: "Raleway",
+        fontFamily: GoogleFonts.getFont("Poppins").fontFamily,
         fontSize: 14,
         fontWeight: FontWeight.w300,
         color: const Color(0xFF2D2D2D),
@@ -78,10 +78,10 @@ ThemeData basicTheme() {
         ],
       ),
       bodyText2: base.bodyText2!.copyWith(
-        fontFamily: "Raleway",
+        fontFamily: GoogleFonts.getFont("Poppins").fontFamily,
         fontSize: 12,
         fontWeight: FontWeight.w500,
-        color: const Color(0xFF212121),
+        color: const Color(0xFF17181A),
         fontFeatures: [
           const FontFeature.enable("pnum"),
           const FontFeature.enable("lnum")
@@ -114,7 +114,7 @@ ThemeData basicTheme() {
     colorScheme: ColorScheme.fromSwatch().copyWith(
       primaryContainer: Color(0xffF4F6F9),
       secondaryContainer: Color(0xffEEF2F6),
-      onBackground: Color(0xff17DCD0),
+      onBackground: Color(0xffE8E8E8),
       //info
       surface: Color(0xff0B4789),
       //success
