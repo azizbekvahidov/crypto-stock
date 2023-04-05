@@ -44,6 +44,7 @@ dependencies:
   connectivity_plus: ^3.0.2
   responsive_framework: ^0.2.0
   google_fonts: ^4.0.3
+  flutter_svg: ^1.1.6
 
 
   # The following adds the Cupertino Icons font to your application.

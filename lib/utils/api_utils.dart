@@ -20,7 +20,7 @@ final dio = Dio(
 
 RestClient configureDio(String? token) {
   log("Token  : >>>>>>>>>>>> \n ${token.toString()}");
-  dio.options.baseUrl = ApiConstants.warehouseApi;
+  dio.options.baseUrl = ApiConstants.api;
   if (token == null) {
     dio.options.headers
         .remove("Authorization"); // config your dio headers globally
@@ -28,8 +28,5 @@ RestClient configureDio(String? token) {
     dio.options.headers["Authorization"] = "bearer $token";
   }
   Get.delete<RestClient>();
-  return Get.put<RestClient>(
-      RestClient(dio, ApiConstants.warehouseApi, ApiConstants.orderApi,
-          ApiConstants.authApi),
-      permanent: true);
+  return Get.put<RestClient>(RestClient(dio), permanent: true);
 }

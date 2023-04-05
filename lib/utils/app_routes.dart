@@ -10,14 +10,14 @@ List<GetPage> pages = [
   //   // middlewares: [
   //   //   IntroMiddleware(),
   //   // ],
+  // // ),
+  // GetPage(
+  //   name: NoConnectionPage.route,
+  //   page: () => NoConnectionPage(),
+  //   middlewares: [MyMiddelware()],
+  //   transition: Transition.cupertino,
+  //   transitionDuration: Duration(milliseconds: 500),
   // ),
-  GetPage(
-    name: NoConnectionPage.route,
-    page: () => NoConnectionPage(),
-    middlewares: [MyMiddelware()],
-    transition: Transition.cupertino,
-    transitionDuration: Duration(milliseconds: 500),
-  ),
   GetPage(
     name: SplashScreen.route,
     page: () => SplashScreen(),
@@ -26,27 +26,19 @@ List<GetPage> pages = [
     transitionDuration: Duration(milliseconds: 500),
   ),
   GetPage(
-    name: '/main_page',
+    name: '/main-view',
     page: () => MainView(),
     middlewares: [MyMiddelware()],
     transition: Transition.cupertino,
     transitionDuration: Duration(milliseconds: 500),
   ),
-
-  // GetPage(
-  //   name: '/set-license',
-  //   page: () => SetLicense(),
-  //   middlewares: [MyMiddelware()],
-  //   transition: Transition.cupertino,
-  //   transitionDuration: Duration(milliseconds: 500),
-  // ),
-  // GetPage(
-  //   name: '/select-role',
-  //   page: () => SelectRole(),
-  //   middlewares: [MyMiddelware()],
-  //   transition: Transition.cupertino,
-  //   transitionDuration: Duration(milliseconds: 500),
-  // ),
+  GetPage(
+    name: '/login-page',
+    page: () => LoginPage(),
+    middlewares: [MyMiddelware()],
+    transition: Transition.cupertino,
+    transitionDuration: Duration(milliseconds: 500),
+  ),
 ];
 
 class MyMiddelware extends GetMiddleware {
