@@ -26,8 +26,15 @@ List<GetPage> pages = [
     transitionDuration: Duration(milliseconds: 500),
   ),
   GetPage(
-    name: '/main_page',
+    name: '/main-view',
     page: () => MainView(),
+    middlewares: [MyMiddelware()],
+    transition: Transition.cupertino,
+    transitionDuration: Duration(milliseconds: 500),
+  ),
+  GetPage(
+    name: '/login-page',
+    page: () => LoginPage(),
     middlewares: [MyMiddelware()],
     transition: Transition.cupertino,
     transitionDuration: Duration(milliseconds: 500),
