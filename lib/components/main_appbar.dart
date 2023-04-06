@@ -1,3 +1,6 @@
+import '../../utils/assets_manager.dart';
+import 'package:flutter_svg/svg.dart';
+
 import '../features/features.dart';
 
 // import './network_status.dart';
@@ -6,7 +9,7 @@ import 'package:get/get.dart';
 import '../../config/globals.dart' as globals;
 
 // ignore: must_be_immutable
-class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
+class MainAppbar extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
   final bool? centerTitle;
   final Color? backgroundColor;
@@ -15,7 +18,7 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   bool hasDrawer;
 
   Function? searchFunc;
-  CustomAppbar(
+  MainAppbar(
       {this.title = "",
       this.centerTitle,
       this.backgroundColor,
@@ -34,33 +37,21 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return GetBuilder<HomeController>(builder: (_control) {
       return AppBar(
-        actions: [],
-        elevation: 1,
-        iconTheme: IconThemeData(color: Get.theme.indicatorColor),
-        backgroundColor: Get.theme.backgroundColor,
-        title: SizedBox(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              hasDrawer
-                  ? IconButton(
-                      icon: Icon(Icons.menu),
-                      // 4. open the drawer if we have one
-                      onPressed: hasDrawer
-                          ? () => ancestorScaffold!.openDrawer()
-                          : null,
-                    )
-                  : Container(),
-              Container(
-                child: Text(
-                  _control.title,
-                  // style: TextStyle(
-                  //     fontFamily: globals.font,
-                  //     fontSize: 18,
-                  //     color: globals.mainColor),
-                ),
-              ),
-            ],
+        centerTitle: true,
+        title: Text(
+          "Лого",
+          style: Get.textTheme.headline1,
+        ),
+        elevation: 0,
+        backgroundColor: Get.theme.scaffoldBackgroundColor,
+        leading: GestureDetector(
+          onTap: () => Get.toNamed("register-page"),
+          child: Container(
+            padding: const EdgeInsets.only(left: 20),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: SvgPicture.asset(Assets.icon("profile"), height: 40),
           ),
         ),
       );

@@ -39,6 +39,13 @@ List<GetPage> pages = [
     transition: Transition.cupertino,
     transitionDuration: Duration(milliseconds: 500),
   ),
+  GetPage(
+    name: '/register-page',
+    page: () => RegisterPage(),
+    middlewares: [MyMiddelware()],
+    transition: Transition.cupertino,
+    transitionDuration: Duration(milliseconds: 500),
+  ),
 ];
 
 class MyMiddelware extends GetMiddleware {

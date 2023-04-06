@@ -1,3 +1,4 @@
+import 'package:crypto_stock/components/main_appbar.dart';
 import 'package:crypto_stock/utils/assets_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -17,26 +18,9 @@ class _MainViewState extends State<MainView> {
 
   @override
   Widget build(BuildContext context) {
+    var appbar = MainAppbar();
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(
-          "Лого",
-          style: Get.textTheme.headline1,
-        ),
-        elevation: 0,
-        backgroundColor: Get.theme.scaffoldBackgroundColor,
-        leading: GestureDetector(
-          onTap: () => Get.toNamed("login-page"),
-          child: Container(
-            padding: const EdgeInsets.only(left: 20),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: SvgPicture.asset(Assets.icon("profile"), height: 40),
-          ),
-        ),
-      ),
+      appBar: appbar,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(

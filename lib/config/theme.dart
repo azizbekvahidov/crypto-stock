@@ -116,10 +116,10 @@ ThemeData basicTheme() {
       secondaryContainer: Color(0xffEEF2F6),
       onBackground: Color(0xffE8E8E8),
       //info
-      surface: Color(0xff0B4789),
+      surface: Color(0xff121212),
       //success
       onPrimary: Color(0xffECFBF1),
-      primary: Color(0xff00BA88),
+      primary: Color(0xff61656A),
       //warning
       secondary: Color(0xffFFAD2E),
       onSecondary: Color(0xffffffff),

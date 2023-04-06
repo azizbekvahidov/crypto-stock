@@ -1,3 +1,6 @@
+import 'package:crypto_stock/utils/assets_manager.dart';
+import 'package:flutter_svg/svg.dart';
+
 import '../features/features.dart';
 
 // import './network_status.dart';
@@ -34,7 +37,22 @@ class DefaultAppbar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return GetBuilder<HomeController>(builder: (_control) {
       return AppBar(
+        automaticallyImplyLeading: false,
         actions: [],
+        leading: IconButton(
+          onPressed: () {
+            Get.back();
+          },
+          icon: Container(
+              width: 40,
+              height: 40,
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+              decoration: BoxDecoration(
+                  color: Get.theme.colorScheme.primaryContainer,
+                  borderRadius: BorderRadius.circular(20)),
+              child: SvgPicture.asset(Assets.icon("left"))),
+          //replace with our own icon data.
+        ),
         elevation: 0,
         iconTheme: IconThemeData(color: Get.theme.indicatorColor),
         backgroundColor: Get.theme.backgroundColor,

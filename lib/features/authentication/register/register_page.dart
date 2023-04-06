@@ -4,31 +4,31 @@ import '../../../components/input/inputs.dart';
 import '../../../utils/assets_manager.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../features/features.dart';
+import '../../features.dart';
 
 import '../../home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'login_controller.dart';
-import 'login_state.dart';
+import 'register_controller.dart';
+import 'register_state.dart';
 
-class LoginPage extends StatelessWidget {
+class RegisterPage extends StatelessWidget {
   static const String route = "/login";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _SignInForm(),
+      body: _SignUpForm(),
     );
   }
 }
 
-class _SignInForm extends StatefulWidget {
+class _SignUpForm extends StatefulWidget {
   @override
-  __SignInFormState createState() => __SignInFormState();
+  __SignUpFormState createState() => __SignUpFormState();
 }
 
-class __SignInFormState extends State<_SignInForm> {
+class __SignUpFormState extends State<_SignUpForm> {
   final _controller = Get.put(LoginController());
 
   Duration get loginTime => const Duration(milliseconds: 2250);
@@ -51,7 +51,7 @@ class __SignInFormState extends State<_SignInForm> {
                     Padding(
                       padding: const EdgeInsets.only(top: 16),
                       child: Text(
-                        "Авторизация",
+                        "Регистрация",
                         style: Get.textTheme.headline1!
                             .copyWith(color: Get.theme.primaryColor),
                       ),
@@ -65,7 +65,14 @@ class __SignInFormState extends State<_SignInForm> {
                       ),
                     ),
                     TextInput(
-                      label: "Username, mail or number",
+                      label: "Имя",
+                      name: "name",
+                      hint: "Your name",
+                      nextAction: true,
+                      icon: SvgPicture.asset(Assets.icon("user")),
+                    ),
+                    TextInput(
+                      label: "Фамилия",
                       name: "name",
                       hint: "Your name",
                       nextAction: true,
