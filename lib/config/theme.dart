@@ -21,7 +21,7 @@ ThemeData basicTheme() {
         fontFamily: GoogleFonts.getFont("Poppins").fontFamily,
         fontSize: 14.0,
         fontWeight: FontWeight.w400,
-        color: Colors.black,
+        color: Color(0xFF17181A),
         fontFeatures: [
           const FontFeature.enable("pnum"),
           const FontFeature.enable("lnum")
@@ -96,7 +96,7 @@ ThemeData basicTheme() {
     //textTheme: Typography().white,
     primaryColor: const Color(0xff17181A),
     hintColor: const Color(0xff878C90),
-    indicatorColor: const Color(0xFF0152FE),
+    indicatorColor: const Color(0xFF5EE784),
     scaffoldBackgroundColor: const Color(0xFFFFFFFF),
     cardColor: Color(0xff3C3F42),
     iconTheme: const IconThemeData(
@@ -118,11 +118,11 @@ ThemeData basicTheme() {
       //info
       surface: Color(0xff121212),
       //success
-      onPrimary: Color(0xffECFBF1),
+      onPrimary: Color(0xff1867FF),
       primary: Color(0xff61656A),
       //warning
-      secondary: Color(0xffFFAD2E),
-      onSecondary: Color(0xffffffff),
+      secondary: Color(0xff5EE784),
+      onSecondary: Color(0xfffafafa),
       //error
       onError: Color(0xFFFF9691),
       error: Color(0xFFE51919),

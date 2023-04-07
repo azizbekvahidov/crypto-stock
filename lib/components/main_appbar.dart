@@ -45,7 +45,7 @@ class MainAppbar extends StatelessWidget implements PreferredSizeWidget {
         elevation: 0,
         backgroundColor: Get.theme.scaffoldBackgroundColor,
         leading: GestureDetector(
-          onTap: () => Get.toNamed("register-page"),
+          onTap: () => Get.toNamed("login-page"),
           child: Container(
             padding: const EdgeInsets.only(left: 20),
             decoration: BoxDecoration(

@@ -56,29 +56,10 @@ class DefaultAppbar extends StatelessWidget implements PreferredSizeWidget {
         elevation: 0,
         iconTheme: IconThemeData(color: Get.theme.indicatorColor),
         backgroundColor: Get.theme.backgroundColor,
-        title: SizedBox(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              hasDrawer
-                  ? IconButton(
-                      icon: Icon(Icons.menu),
-                      // 4. open the drawer if we have one
-                      onPressed: hasDrawer
-                          ? () => ancestorScaffold!.openDrawer()
-                          : null,
-                    )
-                  : Container(),
-              Container(
-                child: Text(
-                  _control.title,
-                  // style: TextStyle(
-                  //     fontFamily: globals.font,
-                  //     fontSize: 18,
-                  //     color: globals.mainColor),
-                ),
-              ),
-            ],
+        title: Text(
+          title ?? "",
+          style: Get.textTheme.headline2!.copyWith(
+            fontWeight: FontWeight.w900,
           ),
         ),
       );

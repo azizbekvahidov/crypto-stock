@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 // ignore: must_be_immutable
-class MainButton extends StatefulWidget {
+class SecondaryButton extends StatefulWidget {
   String text;
   Function() action;
   final Color? textColor;
-  MainButton({
+  SecondaryButton({
     required this.text,
     required this.action,
     this.textColor,
@@ -16,23 +16,25 @@ class MainButton extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _MainButtonState createState() => _MainButtonState();
+  _SecondaryButtonState createState() => _SecondaryButtonState();
 }
 
-class _MainButtonState extends State<MainButton> {
+class _SecondaryButtonState extends State<SecondaryButton> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => widget.action(),
       child: Container(
+          width: double.infinity,
+          alignment: Alignment.center,
           margin: const EdgeInsets.only(bottom: 17),
-          padding: const EdgeInsets.symmetric(horizontal: 43, vertical: 17),
+          padding: const EdgeInsets.symmetric(vertical: 9),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(48),
+            borderRadius: BorderRadius.circular(10),
             gradient: const RadialGradient(
-              center: Alignment(-0.3, -5.5),
+              center: Alignment(-0.3, -98.8),
               focal: Alignment(-0.3, -0.4),
-              radius: 3.4,
+              radius: 50,
               colors: [
                 Color(0xff23C562),
                 Color(0xff77D21C),

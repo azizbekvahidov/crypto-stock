@@ -66,7 +66,6 @@ class _TextInputState extends State<TextInput> {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      // crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         DefaultInput(
           child: SizedBox(

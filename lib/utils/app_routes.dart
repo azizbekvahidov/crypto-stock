@@ -46,6 +46,41 @@ List<GetPage> pages = [
     transition: Transition.cupertino,
     transitionDuration: Duration(milliseconds: 500),
   ),
+  GetPage(
+    name: '/application-list',
+    page: () => ApplicationListView(),
+    middlewares: [MyMiddelware()],
+    transition: Transition.cupertino,
+    transitionDuration: Duration(milliseconds: 500),
+  ),
+  GetPage(
+    name: '/application-view',
+    page: () => ApplicationViewPage(),
+    middlewares: [MyMiddelware()],
+    transition: Transition.cupertino,
+    transitionDuration: Duration(milliseconds: 500),
+  ),
+  GetPage(
+    name: '/application-create',
+    page: () => ApplicationCreatePage(),
+    middlewares: [MyMiddelware()],
+    transition: Transition.cupertino,
+    transitionDuration: Duration(milliseconds: 500),
+  ),
+  GetPage(
+    name: '/application-create-finish',
+    page: () => ApplicationCreateFinishPage(),
+    middlewares: [MyMiddelware()],
+    transition: Transition.cupertino,
+    transitionDuration: Duration(milliseconds: 500),
+  ),
+  GetPage(
+    name: '/finish-application',
+    page: () => FinishApplication(),
+    middlewares: [MyMiddelware()],
+    transition: Transition.cupertino,
+    transitionDuration: Duration(milliseconds: 500),
+  ),
 ];
 
 class MyMiddelware extends GetMiddleware {

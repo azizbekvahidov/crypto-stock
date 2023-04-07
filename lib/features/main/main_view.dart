@@ -134,7 +134,7 @@ class _MainViewState extends State<MainView> {
                         ]),
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () => Get.toNamed("application-create"),
                         child: Column(children: [
                           SvgPicture.asset(
                             Assets.icon("add"),
@@ -154,23 +154,27 @@ class _MainViewState extends State<MainView> {
                 spacing: 4,
                 runSpacing: 13,
                 children: [
-                  Container(
-                    width: Get.width * 0.44,
-                    padding: const EdgeInsets.all(7),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(48),
-                      color: Get.theme.colorScheme.primaryContainer,
+                  GestureDetector(
+                    onTap: () => Get.toNamed("application-list"),
+                    child: Container(
+                      width: Get.width * 0.44,
+                      padding: const EdgeInsets.all(7),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(48),
+                        color: Get.theme.colorScheme.primaryContainer,
+                      ),
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Image.asset(
+                                Assets.icon("gold_coin", format: ".png")),
+                            Text(
+                              "RUB - AED",
+                              style: Get.textTheme.headline6,
+                            ),
+                            SvgPicture.asset(Assets.icon("down")),
+                          ]),
                     ),
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Image.asset(Assets.icon("gold_coin", format: ".png")),
-                          Text(
-                            "RUB - AED",
-                            style: Get.textTheme.headline6,
-                          ),
-                          SvgPicture.asset(Assets.icon("down")),
-                        ]),
                   ),
                   Container(
                     width: Get.width * 0.44,
@@ -279,9 +283,7 @@ class _MainViewState extends State<MainView> {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () {
-                        print("plus");
-                      },
+                      onTap: () => Get.toNamed("application-create"),
                       child: Container(
                         padding: const EdgeInsets.all(21),
                         width: 64,
