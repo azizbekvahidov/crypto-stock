@@ -5,3 +5,4 @@ export 'phone_input.dart';
 export 'input_checkbox.dart';
 export 'number_input.dart';
 export 'dropdown_input.dart';
+export 'chat_input.dart';

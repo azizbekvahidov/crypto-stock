@@ -193,7 +193,7 @@ class _ApplicationViewPageState extends State<ApplicationViewPage> {
                     ),
                     SecondaryButton(
                       text: "Купить",
-                      action: () {},
+                      action: () => Get.toNamed('application-chat'),
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 10),

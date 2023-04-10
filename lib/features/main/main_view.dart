@@ -92,7 +92,7 @@ class _MainViewState extends State<MainView> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () => Get.toNamed("application-list"),
                         child: Column(children: [
                           SvgPicture.asset(
                             Assets.icon("buy"),
@@ -106,7 +106,7 @@ class _MainViewState extends State<MainView> {
                         ]),
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () => Get.toNamed("application-list"),
                         child: Column(children: [
                           SvgPicture.asset(
                             Assets.icon("sell"),
@@ -120,7 +120,7 @@ class _MainViewState extends State<MainView> {
                         ]),
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () => Get.toNamed("application-list"),
                         child: Column(children: [
                           SvgPicture.asset(
                             Assets.icon("p2p"),
@@ -276,7 +276,7 @@ class _MainViewState extends State<MainView> {
                               child: SvgPicture.asset(Assets.icon("chat"))),
                           InkWell(
                               onTap: () {
-                                print("pocket");
+                                Get.toNamed("profile-page");
                               },
                               child: SvgPicture.asset(Assets.icon("pocket"))),
                         ],

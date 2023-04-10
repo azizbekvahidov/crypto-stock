@@ -75,8 +75,22 @@ List<GetPage> pages = [
     transitionDuration: Duration(milliseconds: 500),
   ),
   GetPage(
+    name: '/application-chat',
+    page: () => ApplicationChatPage(),
+    middlewares: [MyMiddelware()],
+    transition: Transition.cupertino,
+    transitionDuration: Duration(milliseconds: 500),
+  ),
+  GetPage(
     name: '/finish-application',
     page: () => FinishApplication(),
+    middlewares: [MyMiddelware()],
+    transition: Transition.cupertino,
+    transitionDuration: Duration(milliseconds: 500),
+  ),
+  GetPage(
+    name: '/profile-page',
+    page: () => ProfilePage(),
     middlewares: [MyMiddelware()],
     transition: Transition.cupertino,
     transitionDuration: Duration(milliseconds: 500),
