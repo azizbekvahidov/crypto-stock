@@ -1,3 +1,4 @@
+import 'package:crypto_stock/components/main_appbar.dart';
 import 'package:crypto_stock/utils/assets_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -17,26 +18,9 @@ class _MainViewState extends State<MainView> {
 
   @override
   Widget build(BuildContext context) {
+    var appbar = MainAppbar();
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(
-          "Лого",
-          style: Get.textTheme.headline1,
-        ),
-        elevation: 0,
-        backgroundColor: Get.theme.scaffoldBackgroundColor,
-        leading: GestureDetector(
-          onTap: () => Get.toNamed("login-page"),
-          child: Container(
-            padding: const EdgeInsets.only(left: 20),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: SvgPicture.asset(Assets.icon("profile"), height: 40),
-          ),
-        ),
-      ),
+      appBar: appbar,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
@@ -108,7 +92,7 @@ class _MainViewState extends State<MainView> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () => Get.toNamed("application-list"),
                         child: Column(children: [
                           SvgPicture.asset(
                             Assets.icon("buy"),
@@ -122,7 +106,7 @@ class _MainViewState extends State<MainView> {
                         ]),
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () => Get.toNamed("application-list"),
                         child: Column(children: [
                           SvgPicture.asset(
                             Assets.icon("sell"),
@@ -136,7 +120,7 @@ class _MainViewState extends State<MainView> {
                         ]),
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () => Get.toNamed("application-list"),
                         child: Column(children: [
                           SvgPicture.asset(
                             Assets.icon("p2p"),
@@ -150,7 +134,7 @@ class _MainViewState extends State<MainView> {
                         ]),
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () => Get.toNamed("application-create"),
                         child: Column(children: [
                           SvgPicture.asset(
                             Assets.icon("add"),
@@ -170,23 +154,27 @@ class _MainViewState extends State<MainView> {
                 spacing: 4,
                 runSpacing: 13,
                 children: [
-                  Container(
-                    width: Get.width * 0.44,
-                    padding: const EdgeInsets.all(7),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(48),
-                      color: Get.theme.colorScheme.primaryContainer,
+                  GestureDetector(
+                    onTap: () => Get.toNamed("application-list"),
+                    child: Container(
+                      width: Get.width * 0.44,
+                      padding: const EdgeInsets.all(7),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(48),
+                        color: Get.theme.colorScheme.primaryContainer,
+                      ),
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Image.asset(
+                                Assets.icon("gold_coin", format: ".png")),
+                            Text(
+                              "RUB - AED",
+                              style: Get.textTheme.headline6,
+                            ),
+                            SvgPicture.asset(Assets.icon("down")),
+                          ]),
                     ),
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Image.asset(Assets.icon("gold_coin", format: ".png")),
-                          Text(
-                            "RUB - AED",
-                            style: Get.textTheme.headline6,
-                          ),
-                          SvgPicture.asset(Assets.icon("down")),
-                        ]),
                   ),
                   Container(
                     width: Get.width * 0.44,
@@ -288,16 +276,14 @@ class _MainViewState extends State<MainView> {
                               child: SvgPicture.asset(Assets.icon("chat"))),
                           InkWell(
                               onTap: () {
-                                print("pocket");
+                                Get.toNamed("profile-page");
                               },
                               child: SvgPicture.asset(Assets.icon("pocket"))),
                         ],
                       ),
                     ),
                     GestureDetector(
-                      onTap: () {
-                        print("plus");
-                      },
+                      onTap: () => Get.toNamed("application-create"),
                       child: Container(
                         padding: const EdgeInsets.all(21),
                         width: 64,

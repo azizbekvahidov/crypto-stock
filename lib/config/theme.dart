@@ -21,7 +21,7 @@ ThemeData basicTheme() {
         fontFamily: GoogleFonts.getFont("Poppins").fontFamily,
         fontSize: 14.0,
         fontWeight: FontWeight.w400,
-        color: Colors.black,
+        color: Color(0xFF17181A),
         fontFeatures: [
           const FontFeature.enable("pnum"),
           const FontFeature.enable("lnum")
@@ -32,7 +32,7 @@ ThemeData basicTheme() {
         fontFamily: GoogleFonts.getFont("Poppins").fontFamily,
         fontSize: 16.0,
         fontWeight: FontWeight.w400,
-        color: const Color(0xffB2C0CD),
+        color: const Color(0xffffffff),
         fontFeatures: [
           const FontFeature.enable("pnum"),
           const FontFeature.enable("lnum")
@@ -51,7 +51,7 @@ ThemeData basicTheme() {
       headline2: base.headline2!.copyWith(
         fontFamily: GoogleFonts.getFont("Poppins").fontFamily,
         fontSize: 18.0,
-        color: const Color(0xff212121),
+        color: const Color(0xff121212),
         fontWeight: FontWeight.w600,
         fontFeatures: [
           const FontFeature.enable("pnum"),
@@ -68,7 +68,7 @@ ThemeData basicTheme() {
         ],
       ),
       bodyText1: base.bodyText2!.copyWith(
-        fontFamily: "Raleway",
+        fontFamily: GoogleFonts.getFont("Poppins").fontFamily,
         fontSize: 14,
         fontWeight: FontWeight.w300,
         color: const Color(0xFF2D2D2D),
@@ -78,10 +78,10 @@ ThemeData basicTheme() {
         ],
       ),
       bodyText2: base.bodyText2!.copyWith(
-        fontFamily: "Raleway",
+        fontFamily: GoogleFonts.getFont("Poppins").fontFamily,
         fontSize: 12,
         fontWeight: FontWeight.w500,
-        color: const Color(0xFF212121),
+        color: const Color(0xFF17181A),
         fontFeatures: [
           const FontFeature.enable("pnum"),
           const FontFeature.enable("lnum")
@@ -96,7 +96,7 @@ ThemeData basicTheme() {
     //textTheme: Typography().white,
     primaryColor: const Color(0xff17181A),
     hintColor: const Color(0xff878C90),
-    indicatorColor: const Color(0xFF0152FE),
+    indicatorColor: const Color(0xFF5EE784),
     scaffoldBackgroundColor: const Color(0xFFFFFFFF),
     cardColor: Color(0xff3C3F42),
     iconTheme: const IconThemeData(
@@ -114,15 +114,15 @@ ThemeData basicTheme() {
     colorScheme: ColorScheme.fromSwatch().copyWith(
       primaryContainer: Color(0xffF4F6F9),
       secondaryContainer: Color(0xffEEF2F6),
-      onBackground: Color(0xff17DCD0),
+      onBackground: Color(0xffE8E8E8),
       //info
-      surface: Color(0xff0B4789),
+      surface: Color(0xff121212),
       //success
-      onPrimary: Color(0xffECFBF1),
-      primary: Color(0xff00BA88),
+      onPrimary: Color(0xff1867FF),
+      primary: Color(0xff61656A),
       //warning
-      secondary: Color(0xffFFAD2E),
-      onSecondary: Color(0xffffffff),
+      secondary: Color(0xff5EE784),
+      onSecondary: Color(0xfffafafa),
       //error
       onError: Color(0xFFFF9691),
       error: Color(0xFFE51919),
